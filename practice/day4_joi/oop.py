@@ -23,7 +23,15 @@ class Point:
 
     @property
     def distance_from_origin(self):
-        return math.sqrt(self.x ** 2 + self.y ** 2)
+        return self.distance_between(self, Point(0, 0))
+
+    @staticmethod
+    def distance_between(a, b):
+        "computes the distance between two points"
+        return math.sqrt(
+            (a.x - b.x) ** 2 +
+            (a.y - b.y) ** 2
+        )
 
 
 class ThreeDPoint(Point):
