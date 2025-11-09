@@ -1,0 +1,6 @@
+# debugging essentials:
+
+print()
+dir()
+type()
+help()
